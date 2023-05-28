@@ -29,15 +29,18 @@ import pandas as pd
 
 URL = "https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json"
 
-#download the data using request.get from the url
-response = requests.get(URL)
-
-# Convert the response data into a pandas dataframe
-df = pd.json_normalize(response.json()["pokemon"])
-
-# Saving the dataframe to an Excel file
-df.to_excel("pokemon_ouput.xlsx", index=False)
-
-#read the data from the excel to verify
-df_read = pd.read_excel("pokemon_ouput.xlsx")
-print(df.head())
+try:
+    #download the data using request.get from the url
+    response = requests.get(URL, timeout=30)
+except requests.ConnectionError as e:
+    print("Connection error, please try after sometimes...")
+except requests.Timeout as e:
+    print("Connection timeout error, please try after sometimes...")
+else:
+    # Convert the response data into a pandas dataframe
+    df = pd.json_normalize(response.json()["pokemon"])
+    # Saving the dataframe to an Excel file
+    df.to_excel("pokemon_ouput.xlsx", index=False)
+    #read the data from the excel to verify
+    df_read = pd.read_excel("pokemon_ouput.xlsx")
+    print(df_read.head())
