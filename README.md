@@ -4,4 +4,4 @@ This repo is for all the assignments, projects and work related to [Full Stack D
 ## Assignments
 - [Python Basic](https://github.com/ashutosh-vaidya/iNeuron/tree/main/Assignments/01.%20Python/01.%20Python%20Basics) | Completed
 - [Python Advanced](https://github.com/ashutosh-vaidya/iNeuron/tree/main/Assignments/01.%20Python/02.%20Python%20Advanced) | Completed
-- [Machine Learning](https://github.com/ashutosh-vaidya/iNeuron/tree/main/Assignments/02.%20Machine%20Learning) | In Progress
+- [Machine Learning Theory](https://github.com/ashutosh-vaidya/iNeuron/tree/main/Assignments/02.%20Machine%20Learning) | Compelted
